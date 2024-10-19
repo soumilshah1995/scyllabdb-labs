@@ -21,3 +21,7 @@ ssh -R 9042:localhost:9042  abc.serveo.net
 Look for Topics ks.users
 
 https://www.scylladb.com/2023/01/25/how-to-use-change-data-capture-with-apache-kafka-and-scylladb/
+
+
+Kafka Plugin download this jar 
+wget -O scylla-cdc-plugin.jar https://github.com/scylladb/scylla-cdc-source-connector/releases/download/scylla-cdc-source-connector-1.0.1/scylla-cdc-source-connector-1.0.1-jar-with-dependencies.jar

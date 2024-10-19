@@ -1,0 +1,23 @@
+
+
+
+docker-compose up --build -d
+
+docker exec -ti scylla-node1 cqlsh
+
+ssh -R 9042:localhost:9042  abc.serveo.net
+
+{
+  "name": "ScyllaUsers",
+  "config": {
+    "name": "ScyllaUsers",
+    "connector.class": "com.scylladb.cdc.debezium.connector.ScyllaConnector",
+    "scylla.cluster.ip.addresses": "abc.serveo.net:9042",
+    "scylla.name": "ks",
+    "scylla.table.names": "ks.users"
+  }
+}
+
+Look for Topics ks.users
+
+https://www.scylladb.com/2023/01/25/how-to-use-change-data-capture-with-apache-kafka-and-scylladb/
